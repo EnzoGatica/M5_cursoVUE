@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de registro para clínica veterinaria" />
+    <meta name="keywords" content="clínica veterinaria, mascotas, registro" />
+    <title>Registro de Mascotas - Clínica Veterinaria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-center my-5">
+        <h2 class="font-weight-bold">Registro de Mascotas</h2>
+        <p>Ingresa la información del dueño y de la mascota para su consulta.</p>
+      </div>
+
+      <!-- formulario -->
+      <form id="formulario" class="border p-4 bg-light">
+        <h4 class="mb-4">Datos del Dueño</h4>
+        <div class="form-group">
+          <label for="nombrePropietario">Nombre del Propietario</label>
+          <input type="text" id="nombrePropietario" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" class="form-control" required>
+        </div>
+
+        <h4 class="mb-4">Datos de la Mascota</h4>
+        <div class="form-group">
+          <label for="tipo">Tipo de Animal</label>
+          <select id="tipo" class="form-control" required>
+            <option value="" disabled selected>Selecciona el tipo de animal</option>
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
+            <option value="Conejo">Conejo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nombreMascota">Nombre de la Mascota</label>
+          <input type="text" id="nombreMascota" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="enfermedad">Motivo de la Consulta</label>
+          <input type="text" id="enfermedad" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Agregar</button>
+      </form>
+
+      <!-- lista datos -->
+      <div class="mt-5">
+        <h4 class="font-weight-bold">Datos Agregados</h4>
+        <ul id="datosAgregados" class="list-group"></ul>
+      </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
